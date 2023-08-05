@@ -1,11 +1,8 @@
 ﻿syntax = "proto3";
+package auth.v1;
+option csharp_namespace = "UserService.Grpc.v1";
 
 import "google/api/annotations.proto";
-
-option csharp_namespace = "UserService.Protos";
-
-package auth;
-
 
 service Auth {
 	rpc Login (LoginRequest) returns (LoginResponse)
@@ -15,7 +12,7 @@ service Auth {
 			body: "*"
 		};
 	}
-	
+
 }
 
 message LoginRequest {

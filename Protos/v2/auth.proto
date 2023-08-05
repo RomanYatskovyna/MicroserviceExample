@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+package auth.v2;
+option csharp_namespace = "UserService.Grpc.v2";
+
+import "google/api/annotations.proto";
+
+service Auth {
+	rpc Login (LoginRequest) returns (LoginResponse)
+	{
+		option (google.api.http) = {
+			post: "/v2/auth"
+			body: "*"
+		};
+	}
+	
+}
+//Login
+message LoginRequest {
+	string username = 1;
+	string password = 2;
+
+}
+
+message LoginResponse {
+	string jwtToken = 1;
+}
