@@ -1,11 +1,10 @@
-﻿
 namespace UserService.Tests.Integration.Tests;
 public abstract class BaseTest
 {
-	//protected UserServiceClient Client;
+    protected UserServiceClient Client;
 
-	//protected BaseTest()
-	//{
-	//    Client = new UserServiceClient("");
-	//}
+    protected BaseTest()
+    {
+        Client = new UserServiceClient("");
+    }
 }
